@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 import NavLogoWrapper from './NavLogoWrapper/NavLogoWrapper';
-import ButtonGroupContainer from '../ButtonGroupContainer/ButtonGroupContainer';
+import NavLinkWrapper from './NavLinkWrapper/NavLinkWrapper';
 
 export default function NavContainer() {
 
@@ -16,7 +16,7 @@ export default function NavContainer() {
                         <NavLogoWrapper />
                     </Grid>
                     <Grid item xs={9} >
-                        <ButtonGroupContainer />
+                        <NavLinkWrapper />
                     </Grid>
                 </Grid>
             </AppBar>

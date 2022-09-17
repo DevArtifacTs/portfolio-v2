@@ -1,13 +1,26 @@
 import React from 'react'
-import { Box, Button, ButtonGroup } from '@mui/material'
+import { Link, Stack } from '@mui/material'
+import IconButton from '@mui/material/IconButton';
+// import { styled } from '@mui/material/styles';
+
 import { styled } from '@mui/material/styles';
 
-const NavLinkButton = styled(Button)`
-    color: black;
-    text-transform: 'uppercase';
-    font-size: 16px;
-    font-weight: medium;
-`
+
+// icons
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+
+const ColorButton = styled('div')(({ theme }) => ({
+    color: 'grey',
+    width: '100%',
+    height: 'auto',
+    // backgroundColor: 'grey',
+    '&:hover': {
+        color: '#25AE92',
+    },
+}));
+
 
 const buttonName = ['about', 'skills', 'portfolio', 'contact', 'resume']
 
@@ -15,17 +28,30 @@ const buttonName = ['about', 'skills', 'portfolio', 'contact', 'resume']
 function ButtonGroupContainer() {
     return (
         <>
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', height: '100%' }}>
-                <ButtonGroup variant="string" aria-label="outlined primary button group">
-                    {buttonName.length > 0 &&
-                        buttonName.map(button =>
-                            <NavLinkButton href={`#${button}`} >
-                                {button}
-                            </NavLinkButton>
-                        )
-                    }
-                </ButtonGroup>
-            </Box>
+            <Stack spacing={2} sx={{ width: '50px', background: '#D9D9D9', borderRadius: '10px' }} >
+                <IconButton size='large' aria-label="linked-in-link" >
+                    <Link target="_blank" rel="noopener" href="https://www.linkedin.com/in/jessada-srimoon">
+                        <ColorButton>
+                            <LinkedInIcon />
+                        </ColorButton>
+                    </Link>
+                </IconButton>
+                <IconButton aria-label="linked-in-link" >
+                    <Link target="_blank" rel="noopener" href="https://github.com/DevArtifacTs">
+                        <ColorButton>
+                            <GitHubIcon />
+                        </ColorButton>
+                    </Link>
+                </IconButton>
+                <IconButton aria-label="linked-in-link" >
+                    <Link target="_blank" rel="noopener" href="mailto: jessada_sr@hotmail.com">
+                        <ColorButton>
+                            <EmailIcon />
+                        </ColorButton>
+                    </Link>
+                </IconButton>
+
+            </Stack >
         </>
     )
 }
