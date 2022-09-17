@@ -5,6 +5,8 @@ import { styled } from '@mui/material/styles';
 const NavLinkButton = styled(Button)`
     color: black;
     text-transform: 'uppercase';
+    font-size: 16px;
+    font-weight: medium;
 `
 
 const buttonName = ['about', 'skills', 'portfolio', 'contact', 'resume']
@@ -17,7 +19,7 @@ function ButtonGroupContainer() {
                 <ButtonGroup variant="string" aria-label="outlined primary button group">
                     {buttonName.length > 0 &&
                         buttonName.map(button =>
-                            <NavLinkButton href={button} >
+                            <NavLinkButton href={`#${button}`} >
                                 {button}
                             </NavLinkButton>
                         )
