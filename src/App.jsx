@@ -4,10 +4,9 @@ import './App.css'
 
 // Lib
 // import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Divider, Chip } from '@mui/material';
 
 
-// image
-import bannerImage from './assets/images/hero-banner.png'
 
 // Component 
 import NavContainer from './components/NavContainer/NavContainer';
@@ -20,7 +19,11 @@ function App() {
   return (
     <>
       <NavContainer />
-      <BannerContainer imgSource={bannerImage} />
+      <BannerContainer />
+      {/* <Divider variant="middle">
+        <Chip label="CHIP" />
+      </Divider> */}
+      {/* <Divider sx={{ height: '100px' }} /> */}
       <AboutMeContainer />
     </>
   )

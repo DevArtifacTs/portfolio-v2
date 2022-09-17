@@ -19,19 +19,19 @@ const ColorButton = styled('div')(({ theme }) => ({
 }));
 
 const icons = [
-    { iconElem: <LinkedInIcon />, link: 'https://www.linkedin.com/in/jessada-srimoon', alt: 'linked-in-link' },
-    { iconElem: <GitHubIcon />, link: 'https://github.com/DevArtifacTs', alt: 'github-link' },
-    { iconElem: <EmailIcon />, link: 'mailto: jessada_sr@hotmail.com', alt: 'email-link' }
+    { iconElem: <LinkedInIcon sx={{ fontSize: '100%' }} />, link: 'https://www.linkedin.com/in/jessada-srimoon', alt: 'linked-in-link' },
+    { iconElem: <GitHubIcon sx={{ fontSize: '100%' }} />, link: 'https://github.com/DevArtifacTs', alt: 'github-link' },
+    { iconElem: <EmailIcon sx={{ fontSize: '100%' }} />, link: 'mailto: jessada_sr@hotmail.com', alt: 'email-link' }
 ]
 
 function ButtonGroupContainer() {
     return (
         <>
-            <Stack spacing={2} sx={{ width: '50px', background: '#D9D9D9', borderRadius: '10px' }} >
+            <Stack spacing={2} sx={{ width: '60px', background: '#D9D9D9', borderRadius: '25px', padding: '5px 0 5px 0' }} >
                 {icons.length > 0 &&
                     icons.map(icon => (
-                        <IconButton size='large' aria-label={icon.alt} >
-                            <Link target="_blank" rel="noopener" href={icon.link}>
+                        <IconButton aria-label={icon.alt} sx={{ fontSize: '35px' }} >
+                            <Link target="_blank" rel="noopener" href={icon.link} sx={{ fontSize: '100%' }}>
                                 <ColorButton>
                                     {icon.iconElem}
                                 </ColorButton>
