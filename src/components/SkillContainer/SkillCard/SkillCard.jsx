@@ -1,12 +1,15 @@
 import React from 'react'
 import { Paper, Button, Box, Typography, Grid } from '@mui/material'
 
+// lib
+import { IconContext } from "react-icons";
+
 
 import skillBackgroundImg from '../../../assets/images/skill-card.png'
 import toolBackgroundImage from '../../../assets/images/tool-card.png'
 
-function SkillCard({ title, iconSrc, type }) {
-    console.log('iconSrc', iconSrc)
+function SkillCard({ title, Icon, type }) {
+    const IconElement = < Icon size={100} />
     return (
         <Paper
             sx={{
@@ -20,9 +23,15 @@ function SkillCard({ title, iconSrc, type }) {
                 }
             }}
         >
-            <Grid container rowSpacing={4} >
-                <Grid item xs={12} >
-                    <img src={iconSrc} alt={title} style={{ width: '120px', height: 'auto', paddingTop: '.75rem', objectFit: 'cover' }} />
+            <Grid container rowSpacing={4} sx={{ marginTop: '25px' }} >
+                <Grid item xs={12} sx={{ padding: '20px' }} >
+                    <IconContext.Provider
+                        value={{ color: "black", className: "global-class-name" }}
+                        style={{ padding: "5px" }}
+                    >
+                        {IconElement}
+                    </IconContext.Provider>
+                    {/* <img src={icon} alt={title} style={{ width: '120px', height: 'auto', paddingTop: '.75rem', objectFit: 'cover' }} /> */}
                 </Grid>
                 <Grid item xs={12} >
                     <Typography variant={'h3'}>{title}</Typography>

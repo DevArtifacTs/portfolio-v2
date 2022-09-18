@@ -63,7 +63,7 @@ function CardDisplayer({ items, cardComponent }) {
                     >
                         {item.map(info => {
                             return (
-                                < Card title={info.name} iconSrc={info.icon} type={info.type} />
+                                < Card title={info.name} Icon={info.icon} type={info.type} key={info.name} />
                             )
                         })}
                     </Box>

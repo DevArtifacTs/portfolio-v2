@@ -38,7 +38,7 @@ function SkillContainer() {
     return (
         <Grid id="about" container sx={{ background: '#1D1D1D' }}>
             <Grid item xs={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
-                <img src={category.skills ? SkillContainerImage : ToolContainerImage} alt='about-me-image' style={{ width: '100%', height: 'auto', }} />
+                <img src={category.skills ? SkillContainerImage : ToolContainerImage} alt='skill-section-image' style={{ width: '100%', height: 'auto', }} />
             </Grid>
             <Grid container item xs={10} sx={{ textAlign: 'center', paddingTop: '20px' }} >
                 <Grid item xs={12}>
