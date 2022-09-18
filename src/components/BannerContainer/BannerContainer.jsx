@@ -9,7 +9,7 @@ import bannerImage from '../../assets/images/hero-banner.png'
 
 function BannerContainer() {
     return (
-        <Grid container sx={{ background: 'black' }}>
+        <Grid container sx={{ background: '#1D1D1D' }}>
             <Grid item xs={2} sx={{ padding: '5px' }}>
                 <img src={bannerImage} alt="banner-image" style={{ width: '100%', height: 'auto' }} />
             </Grid>

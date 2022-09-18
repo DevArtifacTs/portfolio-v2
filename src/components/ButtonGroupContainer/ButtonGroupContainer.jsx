@@ -30,7 +30,7 @@ function ButtonGroupContainer() {
             <Stack spacing={2} sx={{ width: '60px', background: '#D9D9D9', borderRadius: '25px', padding: '5px 0 5px 0' }} >
                 {icons.length > 0 &&
                     icons.map(icon => (
-                        <IconButton aria-label={icon.alt} sx={{ fontSize: '35px' }} >
+                        <IconButton aria-label={icon.alt} sx={{ fontSize: '35px' }} key={icon.alt} >
                             <Link target="_blank" rel="noopener" href={icon.link} sx={{ fontSize: '100%' }}>
                                 <ColorButton>
                                     {icon.iconElem}

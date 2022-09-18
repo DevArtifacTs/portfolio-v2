@@ -17,7 +17,7 @@ function AboutMeTextContainer() {
     return (
         <Stack spacing={5} sx={{ alignItems: 'center', justifyContent: 'center', height: '90%' }}>
             <Box sx={{ maxWidth: '80%', maxHeight: '300px', textAlign: 'justify' }}>
-                <Typography align={'start'} variant={'body'} sx={{ width: '100%', lineHeight: '2.5' }}>
+                <Typography variant={'body'} sx={{ width: '100%', lineHeight: '2.5' }}>
                     Hi!, My name is Jessada Srimoon, I am a Software Developer at Defence Innovation, Ltd and I have a plenty of project behind my back as a Frontend Developer and I also develop my own project
                     as a Fullstack Developer. I like doing this and want to move on, learning new things,
                     I try to keep abreast of trends in the field of Web application development,

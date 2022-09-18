@@ -12,6 +12,7 @@ import { Divider, Chip } from '@mui/material';
 import NavContainer from './components/NavContainer/NavContainer';
 import BannerContainer from './components/BannerContainer/BannerContainer';
 import AboutMeContainer from './components/AboutMeContainer/AboutMeContainer';
+import SkillContainer from './components/SkillContainer/SkillContainer';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       </Divider> */}
       {/* <Divider sx={{ height: '100px' }} /> */}
       <AboutMeContainer />
+      <SkillContainer />
     </>
   )
 }

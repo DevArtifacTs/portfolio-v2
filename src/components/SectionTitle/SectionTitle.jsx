@@ -1,9 +1,9 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 
-function SectionTitle({ title }) {
+function SectionTitle({ title, color = '#1D1D1D' }) {
     return (
-        <Typography variant='h3' sx={{ color: '#1D1D1D', fontSize: '32px', textTransform: 'uppercase' }} > {title} </Typography>
+        <Typography variant='h3' sx={{ color: { color }, fontSize: '32px', textTransform: 'uppercase' }} > {title} </Typography>
     )
 }
 
