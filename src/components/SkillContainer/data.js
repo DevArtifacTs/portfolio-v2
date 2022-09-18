@@ -16,32 +16,32 @@ import vsCodeIcon from '../../assets/icons//vscode.png'
 import jiraIcon from '../../assets/icons/jira.png'
 
 
-export const skills =[
-    [
-        { name: 'React', icon: reactIcon},
-        { name: 'Vue', icon: vueIcon},
-        { name: 'Mui', icon: muiIcon},
-    ],
-    [
-        { name: 'HTML', icon: htmlIcon},
-        { name: 'CSS', icon: cssIcon},
-        { name: 'Bootstrap', icon: bootstrapIcon},
-    ],
-    [
-        { name: 'Node', icon: nodeIcon},
-        { name: 'Express', icon: expressIcon},
-        { name: 'Mongo', icon: mongoIcon},
-    ],
-]
+export const skills = [
+	[
+		{ name: "React", icon: reactIcon, type: "skill" },
+		{ name: "Vue", icon: vueIcon, type: "skill" },
+		{ name: "Mui", icon: muiIcon, type: "skill" },
+	],
+	[
+		{ name: "HTML", icon: htmlIcon, type: "skill" },
+		{ name: "CSS", icon: cssIcon, type: "skill" },
+		{ name: "Bootstrap", icon: bootstrapIcon, type: "skill" },
+	],
+	[
+		{ name: "Node", icon: nodeIcon, type: "skill" },
+		{ name: "Express", icon: expressIcon, type: "skill" },
+		{ name: "Mongo", icon: mongoIcon, type: "skill" },
+	],
+];
 
 export const tools = [
 	[
-		{ name: "Git", icon: gitIcon},
-		{ name: "Figma", icon: figmaIcon },
-		{ name: "Filezilla", icon: fileZillaIcon },
+		{ name: "Git", icon: gitIcon, type: "tool" },
+		{ name: "Figma", icon: figmaIcon, type: "tool" },
+		{ name: "Filezilla", icon: fileZillaIcon, type: "tool" },
 	],
 	[
-		{ name: "VSCode", icon: vsCodeIcon},
-		{ name: "Jira", icon: jiraIcon },
+		{ name: "VSCode", icon: vsCodeIcon, type: "tool" },
+		{ name: "Jira", icon: jiraIcon, type: "tool" },
 	],
 ];

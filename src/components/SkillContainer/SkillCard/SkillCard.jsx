@@ -1,18 +1,18 @@
 import React from 'react'
 import { Paper, Button, Box, Typography, Grid } from '@mui/material'
 
-import iconReact from '../../../assets/icons/react.png'
 
-import backgroundImg from '../../../assets/images/skill-card.png'
+import skillBackgroundImg from '../../../assets/images/skill-card.png'
+import toolBackgroundImage from '../../../assets/images/tool-card.png'
 
-function SkillCard({ title, iconSrc }) {
+function SkillCard({ title, iconSrc, type }) {
     console.log('iconSrc', iconSrc)
     return (
         <Paper
             sx={{
                 width: '230px',
                 height: '287.5px',
-                backgroundImage: `url(${backgroundImg})`,
+                backgroundImage: type === 'skill' ? `url(${skillBackgroundImg})` : `url(${toolBackgroundImage})`,
                 backgroundSize: 'cover',
                 borderRadius: '20px',
                 '&: hover': {

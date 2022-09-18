@@ -2,21 +2,8 @@ import React from 'react'
 import { Grid, Box, Button, ButtonGroup } from '@mui/material'
 
 import CardDisplayer from '../../CardDisplayer/CardDisplayer'
-import SkillCard from '../SkillCard/SkillCard'
-
 
 const buttons = ['skills', 'tools']
-
-var skillItems = [
-    {
-        name: "Random Name #1",
-        description: "Probably the most random thing you have ever seen!"
-    },
-    {
-        name: "Random Name #2",
-        description: "Hello World!"
-    }
-]
 
 function SkillTableContainer({ handleCategory, category, items }) {
 

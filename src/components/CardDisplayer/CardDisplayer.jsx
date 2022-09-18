@@ -61,7 +61,7 @@ function CardDisplayer({ items }) {
                     >
                         {item.map(info => {
                             return (
-                                < SkillCard title={info.name} iconSrc={info.icon} />
+                                < SkillCard title={info.name} iconSrc={info.icon} type={info.type} />
                             )
                         })}
                     </Box>
