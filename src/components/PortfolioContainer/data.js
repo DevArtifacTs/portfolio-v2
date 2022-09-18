@@ -2,6 +2,7 @@
 import exeractImage from "../../assets/images/exeract.png";
 import reactWeatherImage from "../../assets/images/react-weather.png";
 import vueWeatherImage from "../../assets/images/vue-weather.png";
+import muiSocialImage from "../../assets/images/mui-social-app.png";
 // import formValidationImage from "../../assets/images/form-validation.png";
 // import freeCodeCampPortImage from "../../assets/images/free-code-camp-port.png";
 // import nftCardImage from "../../assets/images/nft.png";
@@ -40,6 +41,16 @@ export const projects = [
 			link: "https://react-weather-ew3gu1pv3-devartifacts.vercel.app/",
 			tag: "#API",
 		},
+		{
+			name: "MUI Social App.",
+			img: muiSocialImage,
+			caption: "Social application interface mocking up using MUI",
+			stacks: [FaReact, FaHtml5, FaCss3Alt, SiMaterialui],
+			link: "https://mui-social-app-ui.vercel.app/",
+			tag: "#UI",
+		},
+	],
+	[
 		{
 			name: "Vue Weather App.",
 			img: vueWeatherImage,
