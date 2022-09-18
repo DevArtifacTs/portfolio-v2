@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid, Box, Button, ButtonGroup } from '@mui/material'
 
 import CardDisplayer from '../../CardDisplayer/CardDisplayer'
+import SkillCard from '../SkillCard/SkillCard'
 
 const buttons = ['skills', 'tools']
 
@@ -36,7 +37,7 @@ function SkillTableContainer({ handleCategory, category, items }) {
                 </ButtonGroup>
             </Grid>
             <Grid item xs={12} sx={{}} >
-                <CardDisplayer items={items} />
+                <CardDisplayer items={items} cardComponent={SkillCard} />
             </Grid>
         </Grid>
     )

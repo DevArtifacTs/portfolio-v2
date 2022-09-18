@@ -11,9 +11,11 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 
-function CardDisplayer({ items }) {
+function CardDisplayer({ items, cardComponent }) {
 
     // console.log('items: ', items)
+
+    const Card = cardComponent
 
     return (
         <Carousel
@@ -61,7 +63,7 @@ function CardDisplayer({ items }) {
                     >
                         {item.map(info => {
                             return (
-                                < SkillCard title={info.name} iconSrc={info.icon} type={info.type} />
+                                < Card title={info.name} iconSrc={info.icon} type={info.type} />
                             )
                         })}
                     </Box>
