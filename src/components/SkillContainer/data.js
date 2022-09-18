@@ -31,6 +31,7 @@ import {
 	SiMongodb,
 	SiVisualstudio,
 	SiFilezilla,
+	SiPostman,
 } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
 
@@ -59,12 +60,13 @@ export const skills = [
 
 export const tools = [
 	[
-		{ name: "Git", icon: FaGitAlt , type: "tool" },
-		{ name: "Figma", icon: CgFigma , type: "tool" },
-		{ name: "Filezilla", icon: SiFilezilla , type: "tool" },
+		{ name: "Git", icon: FaGitAlt, type: "tool" },
+		{ name: "PostMan", icon: SiPostman, type: "tool" },
+		{ name: "Figma", icon: CgFigma, type: "tool" },
 	],
 	[
-		{ name: "VSCode", icon: SiVisualstudio , type: "tool" },
-		{ name: "Jira", icon: FaJira , type: "tool" },
+		{ name: "VSCode", icon: SiVisualstudio, type: "tool" },
+		{ name: "Jira", icon: FaJira, type: "tool" },
+		{ name: "Filezilla", icon: SiFilezilla, type: "tool" },
 	],
 ];

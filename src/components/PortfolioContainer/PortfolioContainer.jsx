@@ -8,9 +8,9 @@ import PortfolioTableContainer from './PortfolioTableContainer/PortfolioTableCon
 // image
 import PortfolioContainerImage from '../../assets/images/portfolio-banner.png'
 
+// data
+import { projects } from './data'
 
-
-const buttons = ['skills', 'tools']
 
 function PortfolioContainer() {
     return (
@@ -18,7 +18,7 @@ function PortfolioContainer() {
             <Grid container item xs={10} sx={{ textAlign: 'center', paddingTop: '20px' }} >
                 <Grid item xs={12}>
                     <SectionTitle title={'portfolio'} color={'white'} />
-                    <PortfolioTableContainer />
+                    <PortfolioTableContainer items={projects} />
                 </Grid>
             </Grid>
             <Grid item xs={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >

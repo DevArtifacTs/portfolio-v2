@@ -31,7 +31,6 @@ function SkillCard({ title, Icon, type }) {
                     >
                         {IconElement}
                     </IconContext.Provider>
-                    {/* <img src={icon} alt={title} style={{ width: '120px', height: 'auto', paddingTop: '.75rem', objectFit: 'cover' }} /> */}
                 </Grid>
                 <Grid item xs={12} >
                     <Typography variant={'h3'}>{title}</Typography>

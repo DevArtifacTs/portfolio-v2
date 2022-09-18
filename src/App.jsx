@@ -23,19 +23,12 @@ function App() {
 
   return (
     <>
-      {/* <IconContext.Provider value={{ color: "red", className: "global-class-name" }} >
-        <FaBeer size={50} />
-      </IconContext.Provider> */}
 
       <NavContainer />
       <BannerContainer />
-      {/* <Divider variant="middle">
-        <Chip label="CHIP" />
-      </Divider> */}
-      {/* <Divider sx={{ height: '100px' }} /> */}
       <AboutMeContainer />
       <SkillContainer />
-      {/* <PortfolioContainer /> */}
+      <PortfolioContainer />
     </>
   )
 }

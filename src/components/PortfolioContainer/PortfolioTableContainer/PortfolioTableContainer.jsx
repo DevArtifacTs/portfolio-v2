@@ -6,10 +6,11 @@ import PortfolioCard from '../PortfolioCard/PortfolioCard'
 
 
 function PortfolioTableContainer({ items }) {
+    console.log('items', items)
     return (
         <Grid container sx={{ height: '90%', marginTop: '10px' }}>
             <Grid item xs={12} sx={{}} >
-                <CardDisplayer items={items} cardComponent={PortfolioCard} />
+                <CardDisplayer items={items} cardComponent={PortfolioCard} type={'portfolio'} />
             </Grid>
         </Grid>
     )

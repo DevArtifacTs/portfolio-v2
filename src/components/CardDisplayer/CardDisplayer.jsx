@@ -2,16 +2,11 @@ import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button, Box, Typography } from '@mui/material'
 
-import skillBannerImg from '../../assets/images/skill-banner.png'
-import toolBannerImg from '../../assets/images/tool-banner.png'
-
-import SkillCard from '../SkillContainer/SkillCard/SkillCard'
-
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 
-function CardDisplayer({ items, cardComponent }) {
+function CardDisplayer({ items, cardComponent, type = 'skill' }) {
 
     // console.log('items: ', items)
 
@@ -19,8 +14,8 @@ function CardDisplayer({ items, cardComponent }) {
 
     return (
         <Carousel
-            NextIcon={<ArrowForwardIosIcon />}
-            PrevIcon={<ArrowBackIosNewIcon />}
+            NextIcon={items.length > 1 ? <ArrowForwardIosIcon /> : false}
+            PrevIcon={items.length > 1 ? <ArrowBackIosNewIcon /> : false}
             navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
                 style: {
                     backgroundColor: 'none',
@@ -29,14 +24,15 @@ function CardDisplayer({ items, cardComponent }) {
                     color: 'white'
                 }
             }}
-            navButtonsAlwaysVisible={true}
+            navButtonsAlwaysVisible={items.length > 1 ? true : false}
             navButtonsWrapperProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
                 style: {
                     color: '#25AE92',
                     display: 'inline-block'
                 }
             }}
-            IndicatorIcon={< HorizontalRuleIcon sx={{ fontSize: '50px' }} />}
+            IndicatorIcon={items.length > 1 ? < HorizontalRuleIcon sx={{ fontSize: '50px' }} /> : <></>}
+            // IndicatorIcon={< HorizontalRuleIcon sx={{ fontSize: '50px' }} />}
             activeIndicatorIconButtonProps={{
                 style: {
                     color: '#25AE92'
@@ -63,7 +59,12 @@ function CardDisplayer({ items, cardComponent }) {
                     >
                         {item.map(info => {
                             return (
-                                < Card title={info.name} Icon={info.icon} type={info.type} key={info.name} />
+                                <>
+                                    {type === 'skill'
+                                        ? < Card title={info.name} Icon={info.icon} type={info.type} key={info.name} />
+                                        : < Card title={info.name} img={info.img} caption={info.caption} stacks={info.stacks} tag={info.tag} link={info.link} key={info.name} />
+                                    }
+                                </>
                             )
                         })}
                     </Box>
@@ -71,24 +72,6 @@ function CardDisplayer({ items, cardComponent }) {
             }
 
         </Carousel >
-    )
-}
-
-function Item(props) {
-    return (
-        <Paper sx={{
-            width: '280px', height: '350px', backgroundImage: `url(${backgroundImg})`,
-            '&: hover': {
-                transform: 'scale(1.1)'
-            }
-        }}>
-            <h2>{props.item.name}</h2>
-            <p>{props.item.description}</p>
-
-            <Button className="CheckButton">
-                Check it out!
-            </Button>
-        </Paper>
     )
 }
 

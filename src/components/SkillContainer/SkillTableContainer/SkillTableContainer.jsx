@@ -8,7 +8,6 @@ const buttons = ['skills', 'tools']
 
 function SkillTableContainer({ handleCategory, category, items }) {
 
-
     return (
         <Grid container sx={{ height: '90%', marginTop: '10px' }}>
             <Grid item xs={12} sx={{}}>
@@ -37,7 +36,7 @@ function SkillTableContainer({ handleCategory, category, items }) {
                 </ButtonGroup>
             </Grid>
             <Grid item xs={12} sx={{}} >
-                <CardDisplayer items={items} cardComponent={SkillCard} />
+                <CardDisplayer items={items} cardComponent={SkillCard} type={'skill'} />
             </Grid>
         </Grid>
     )
