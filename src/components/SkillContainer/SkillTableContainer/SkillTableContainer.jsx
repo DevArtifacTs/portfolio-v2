@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Box, Button, ButtonGroup } from '@mui/material'
 
-import CardDisplayer from '../CardDisplayer/CardDisplayer'
+import CardDisplayer from '../../CardDisplayer/CardDisplayer'
 import SkillCard from '../SkillCard/SkillCard'
 
 

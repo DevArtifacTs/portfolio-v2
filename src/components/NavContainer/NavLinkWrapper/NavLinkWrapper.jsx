@@ -1,15 +1,8 @@
 import React from 'react'
 import { Box, Button, ButtonGroup } from '@mui/material'
-// import { styled } from '@mui/material/styles';
 
-// const NavLinkButton = styled(Button)`
-//     color: black;
-//     text-transform: 'uppercase';
-//     font-size: 16px;
-//     font-weight: medium;
-// `
-
-const buttonName = ['about', 'skills', 'portfolio', 'contact', 'resume']
+const buttonName = ['about', 'skills', 'portfolio', 'contact']
+// const buttonName = ['about', 'skills', 'portfolio', 'contact', 'resume']
 
 
 function NavLinkWrapper() {

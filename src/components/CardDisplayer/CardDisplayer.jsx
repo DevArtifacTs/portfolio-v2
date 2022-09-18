@@ -2,20 +2,49 @@ import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button, Box, Typography } from '@mui/material'
 
-import backgroundImg from '../../../assets/images/skill-card.png'
+import skillBannerImg from '../../assets/images/skill-banner.png'
+import toolBannerImg from '../../assets/images/tool-banner.png'
 
-import SkillCard from '../SkillCard/SkillCard'
+import SkillCard from '../SkillContainer/SkillCard/SkillCard'
+
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 
 function CardDisplayer({ items }) {
 
     // console.log('items: ', items)
 
     return (
-        <Carousel sx={{
-            width: '100%',
-            height: '100%',
+        <Carousel
+            NextIcon={<ArrowForwardIosIcon />}
+            PrevIcon={<ArrowBackIosNewIcon />}
+            navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
+                style: {
+                    backgroundColor: 'none',
+                    borderRadius: 5,
+                    display: 'inline-block',
+                    color: 'white'
+                }
+            }}
+            navButtonsAlwaysVisible={true}
+            navButtonsWrapperProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
+                style: {
+                    color: '#25AE92',
+                    display: 'inline-block'
+                }
+            }}
+            IndicatorIcon={< HorizontalRuleIcon sx={{ fontSize: '50px' }} />}
+            activeIndicatorIconButtonProps={{
+                style: {
+                    color: '#25AE92'
+                }
+            }}
+            sx={{
+                width: '100%',
+                height: '100%',
 
-        }}>
+            }}>
             {
                 items.map(item => (
                     <Box
@@ -28,11 +57,9 @@ function CardDisplayer({ items }) {
                             padding: '1rem',
                             width: '100%',
                             height: '100%',
-                            // border: '1px solid red'
                         }}
                     >
                         {item.map(info => {
-                            // console.log('info: ', info)
                             return (
                                 < SkillCard title={info.name} iconSrc={info.icon} />
                             )
@@ -41,7 +68,7 @@ function CardDisplayer({ items }) {
                 ))
             }
 
-        </Carousel>
+        </Carousel >
     )
 }
 

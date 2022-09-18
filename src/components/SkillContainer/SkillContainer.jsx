@@ -45,8 +45,6 @@ function SkillContainer() {
                     <SectionTitle title={'skills'} color={'white'} />
                     <SkillTableContainer handleCategory={handleCategory} category={category} items={category.skills ? skills : tools} />
                 </Grid>
-                {/* <Grid item xs={12}>
-                </Grid> */}
             </Grid>
         </Grid>
     )
