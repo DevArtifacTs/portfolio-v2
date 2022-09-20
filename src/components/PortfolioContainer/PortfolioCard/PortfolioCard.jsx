@@ -1,8 +1,15 @@
 import React from 'react'
-import { Paper, Button, Link, Typography, Stack, Divider, Card, CardActions, CardContent, CardMedia } from '@mui/material'
+import { Button, Typography, Stack, Divider, Card, CardActions, CardContent, CardMedia } from '@mui/material'
+import { styled } from '@mui/material/styles';
 
 // lib
 import { IconContext } from "react-icons";
+
+const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
+    '&:hover': {
+        filter: 'grayscale(0)'
+    }
+}))
 
 function PortfolioCard({ title, img, stacks, link, caption, tag }) {
     return (
@@ -20,12 +27,13 @@ function PortfolioCard({ title, img, stacks, link, caption, tag }) {
                 }
             }}
         >
-            <CardMedia
+            <StyledCardMedia
                 component="img"
                 alt={title}
                 height="140"
                 image={img}
                 sx={{ filter: "grayscale(100%)" }}
+
             />
             <CardContent sx={{ padding: 0, padding: '0.4rem' }}>
                 <Typography gutterBottom variant="h5" component="div" sx={{ fontSize: '16px', textAlign: 'start', color: 'white' }}>
