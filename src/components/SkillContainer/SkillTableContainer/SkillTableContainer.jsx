@@ -7,9 +7,10 @@ import SkillCard from "../SkillCard/SkillCard";
 const buttons = ["skills", "tools"];
 
 function SkillTableContainer({ handleCategory, category, items }) {
+  console.log("items", items);
   return (
     <Grid container sx={{ height: "90%", marginTop: "10px" }}>
-      <Grid item xs={12} sx={{}}>
+      {/* <Grid item xs={12} sx={{}}>
         <ButtonGroup
           variant="string"
           aria-label="outlined primary button group"
@@ -21,7 +22,7 @@ function SkillTableContainer({ handleCategory, category, items }) {
                 disableRipple
                 variant="string"
                 name={button}
-                onClick={handleCategory}
+                onClick={(e) => handleCategory(e)}
                 size="medium"
                 key={button}
                 sx={{
@@ -40,7 +41,7 @@ function SkillTableContainer({ handleCategory, category, items }) {
               </Button>
             ))}
         </ButtonGroup>
-      </Grid>
+      </Grid> */}
       <Grid item xs={12} sx={{}}>
         <CardDisplayer items={items} cardComponent={SkillCard} type={"skill"} />
       </Grid>

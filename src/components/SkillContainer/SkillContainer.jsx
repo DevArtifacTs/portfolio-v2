@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, CardMedia } from "@mui/material";
 
 // component
@@ -18,7 +18,19 @@ function SkillContainer() {
     tools: false,
   });
 
+  const [itemList, setItemList] = useState(skills);
+  useEffect(() => {
+    if (category.skills) {
+      setItemList(skills);
+    } else {
+      setItemList(tools);
+    }
+    console.log("category change!", category);
+  }, [category]);
+  console.log("itemList!", itemList);
+
   const handleCategory = (e) => {
+    console.log("e", e);
     const keys = Object.keys(category);
     const newList = keys.map((key) => {
       console.log("key= ", key);
@@ -29,6 +41,7 @@ function SkillContainer() {
       }
     });
     const newCategoryObject = Object.fromEntries(newList);
+    console.log("newCategoryObject", newCategoryObject);
     setCategory(newCategoryObject);
   };
 
@@ -73,7 +86,8 @@ function SkillContainer() {
           <SkillTableContainer
             handleCategory={handleCategory}
             category={category}
-            items={category.skills ? skills : tools}
+            items={itemList}
+            // items={category.skills ? skills : tools}
           />
         </Grid>
       </Grid>

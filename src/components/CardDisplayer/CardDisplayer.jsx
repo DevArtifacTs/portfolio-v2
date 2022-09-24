@@ -9,6 +9,7 @@ import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 function CardDisplayer({ items, cardComponent, type = "skill" }) {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [itemList, setItemList] = useState(items);
+  console.log("items in displayer", items);
 
   function getWindowSize() {
     const { innerWidth, innerHeight } = window;
