@@ -12,8 +12,8 @@ function NavLogoWrapper() {
           gap: "5px",
           paddingBottom: "20px",
           borderRight: {
-            // xs: "none",
-            xs: "0.5px solid black",
+            xs: "none",
+            md: "0.5px solid black",
           },
         }}
       >
