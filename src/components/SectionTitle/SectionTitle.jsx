@@ -7,9 +7,12 @@ function SectionTitle({ title, color = "#1D1D1D" }) {
       variant="h3"
       sx={{
         color: { color },
-        fontSize: "32px",
         textTransform: "uppercase",
         fontWeight: "bold",
+        fontSize: {
+          xs: "24px",
+          md: "32px",
+        },
       }}
     >
       {title}
