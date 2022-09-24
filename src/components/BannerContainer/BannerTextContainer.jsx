@@ -29,8 +29,21 @@ const WhiteText = styled("h3")`
 
 function BannerTextContainer() {
   return (
-    <Grid container rowSpacing={5}>
-      <Grid item xs={12}>
+    <Grid
+      container
+      rowSpacing={5}
+      sx={{
+        padding: { xs: "1rem", md: "0" },
+      }}
+    >
+      <Grid
+        item
+        xs={12}
+        sx={{
+          display: { xs: "flex" },
+          justifyContent: { xs: "start", md: "end" },
+        }}
+      >
         <LineWrapper>
           <Typography
             variant="h3"
@@ -43,25 +56,46 @@ function BannerTextContainer() {
                 color: "#25AE92",
                 transform: "translateX(-10px) ",
               },
+              fontSize: {
+                xs: "22px",
+                md: "32px",
+              },
             }}
           >
             Hi! I’m Jessada Srimoon
           </Typography>
-          <WhiteDot />
+          <WhiteDot
+            sx={{
+              display: {
+                xs: "none",
+                md: "block",
+              },
+            }}
+          />
         </LineWrapper>
       </Grid>
-      <Grid item xs={12}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          display: { xs: "flex" },
+          justifyContent: { xs: "start", md: "end" },
+        }}
+      >
         <LineWrapper>
           <Typography
             variant="h3"
             sx={{
               color: "#25AE92",
-              fontSize: "24px",
               fontWeight: "bold",
               transition: "color .8s, transform .5s",
               "&:hover": {
                 color: "white",
                 transform: "translateX(-10px) translateY(-10px)",
+              },
+              fontSize: {
+                xs: "16px",
+                md: "24px",
               },
             }}
           >
@@ -69,10 +103,27 @@ function BannerTextContainer() {
             <span style={{ color: "white" }}> & </span>
             Mechanical Engineer
           </Typography>
-          <WhiteDot />
+          <WhiteDot
+            sx={{
+              display: {
+                xs: "none",
+                md: "block",
+              },
+            }}
+          />
         </LineWrapper>
       </Grid>
-      <Grid item xs={12} sx={{ maxWidth: "50px" }}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          maxWidth: "50px",
+          display: {
+            xs: "none",
+            md: "block",
+          },
+        }}
+      >
         <LineWrapper>
           <Typography
             variant="subtitle1"

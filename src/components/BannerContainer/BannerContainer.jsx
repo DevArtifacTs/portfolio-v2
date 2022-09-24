@@ -8,8 +8,28 @@ import bannerImage from "../../assets/images/hero-banner-2.png";
 
 function BannerContainer() {
   return (
-    <Grid container sx={{ background: "#1D1D1D" }}>
-      <Grid item xs={2} sx={{ padding: "5px" }}>
+    <Grid
+      container
+      sx={{
+        background: "#1D1D1D",
+        padding: {
+          xs: ".3rem",
+          sx: "2rem",
+          md: "0",
+        },
+      }}
+    >
+      <Grid
+        item
+        xs={2}
+        sx={{
+          padding: "5px",
+          display: {
+            xs: "none",
+            md: "flex",
+          },
+        }}
+      >
         <CardMedia
           component="img"
           alt="banner-image"
@@ -28,7 +48,8 @@ function BannerContainer() {
       </Grid>
       <Grid
         item
-        xs={10}
+        xs={12}
+        md={10}
         sx={{
           display: "flex",
           flexDirection: "column",

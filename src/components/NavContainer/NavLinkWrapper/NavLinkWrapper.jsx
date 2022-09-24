@@ -79,6 +79,8 @@ function NavLinkWrapper() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        aria-label="delete"
+        size="large"
         sx={{
           display: {
             xs: "flex",
@@ -86,7 +88,7 @@ function NavLinkWrapper() {
           },
         }}
       >
-        <MenuIcon />
+        <MenuIcon sx={{ fontSize: "45px" }} />
       </IconButton>
       <Menu
         id="demo-positioned-menu"
