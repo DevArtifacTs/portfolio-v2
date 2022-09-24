@@ -17,7 +17,8 @@ function PortfolioContainer() {
       <Grid
         container
         item
-        xs={10}
+        xs={12}
+        lg={10}
         sx={{ textAlign: "center", paddingTop: "20px" }}
       >
         <Grid item xs={12}>
@@ -27,8 +28,15 @@ function PortfolioContainer() {
       </Grid>
       <Grid
         item
-        xs={2}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        lg={2}
+        sx={{
+          display: {
+            xs: "none",
+            lg: "flex",
+          },
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
         <img
           src={PortfolioContainerImage}
