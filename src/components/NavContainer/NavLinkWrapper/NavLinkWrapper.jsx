@@ -96,7 +96,7 @@ function NavLinkWrapper() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        transitionDuration={{ appear: 700, enter: 700, exit: 1000 }}
+        transitionDuration={{ appear: 700, enter: 1300, exit: 1000 }}
         anchorOrigin={{
           vertical: "top",
           horizontal: "left",
