@@ -11,10 +11,26 @@ export default function NavContainer() {
     <AppBar position="sticky" sx={{ background: "#ffffff" }}>
       <Box sx={{ flexGrow: 1, background: "#ffffff" }}>
         <Grid container>
-          <Grid item xs={3}>
+          <Grid item xs={5.5} md={5}>
             <NavLogoWrapper />
           </Grid>
-          <Grid item xs={9}>
+          <Grid
+            item
+            xs={5.5}
+            md={6}
+            sx={{
+              display: {
+                xs: "flex",
+                md: "block",
+              },
+              justifyContent: {
+                xs: "flex-end",
+              },
+              alignItems: {
+                xs: "center",
+              },
+            }}
+          >
             <NavLinkWrapper />
           </Grid>
         </Grid>

@@ -11,7 +11,10 @@ function NavLogoWrapper() {
           width: "100%",
           gap: "5px",
           paddingBottom: "20px",
-          borderRight: "0.5px solid black",
+          borderRight: {
+            // xs: "none",
+            xs: "0.5px solid black",
+          },
         }}
       >
         <Container
@@ -25,7 +28,6 @@ function NavLogoWrapper() {
               backgroundColor: "#25AE92",
               transform: "scale(1.02) ",
               boxShadow: "0px 5px 10px rgba(0,0,0,.7)",
-              // transform: " translateX(300px)",
             },
           }}
         >
@@ -34,9 +36,13 @@ function NavLogoWrapper() {
             gutterBottom={true}
             sx={{
               textTransform: "uppercase",
-              fontSize: "22px",
               fontWeight: "bold",
               margin: "0",
+              fontSize: {
+                xs: "12px",
+                sm: "16px",
+                md: "22px",
+              },
             }}
           >
             software developer
@@ -47,11 +53,14 @@ function NavLogoWrapper() {
           gutterBottom={true}
           sx={{
             color: "black",
-            fontSize: "14px",
             fontWeight: "bold",
             textAlign: "end",
             paddingRight: "10px",
             transition: " transform .5s  ",
+            fontSize: {
+              xs: "12px",
+              sm: "14px",
+            },
             "&:hover": {
               color: "#25AE92",
               transform: "translateX(-10px)",
