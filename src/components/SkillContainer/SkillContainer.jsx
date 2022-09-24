@@ -36,8 +36,15 @@ function SkillContainer() {
     <Grid id="skills" container sx={{ background: "#1D1D1D" }}>
       <Grid
         item
-        xs={2}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+        lg={2}
+        sx={{
+          justifyContent: "center",
+          alignItems: "center",
+          display: {
+            xs: "none",
+            lg: "flex",
+          },
+        }}
       >
         <CardMedia
           component="img"
@@ -57,7 +64,8 @@ function SkillContainer() {
       <Grid
         container
         item
-        xs={10}
+        xs={12}
+        lg={10}
         sx={{ textAlign: "center", paddingTop: "20px" }}
       >
         <Grid item xs={12}>

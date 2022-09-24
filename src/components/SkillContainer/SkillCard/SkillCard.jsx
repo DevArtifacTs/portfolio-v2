@@ -12,8 +12,12 @@ function SkillCard({ title, Icon, type }) {
   return (
     <Paper
       sx={{
-        width: "230px",
-        height: "287.5px",
+        width: {
+          xs: "230px",
+        },
+        height: {
+          xs: "287.5px",
+        },
         backgroundImage:
           type === "skill"
             ? `url(${skillBackgroundImg})`
