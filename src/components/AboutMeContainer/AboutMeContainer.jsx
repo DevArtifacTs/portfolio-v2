@@ -14,6 +14,7 @@ function AboutMeContainer() {
     <Grid id="about" container sx={{ marginTop: "0" }}>
       {/* <Grid id="about" container sx={{ marginTop: '10px', borderTop: '1px solid gray' }}> */}
       <Grid
+        id="contact"
         item
         xs={2}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}

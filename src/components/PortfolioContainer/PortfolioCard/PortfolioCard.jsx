@@ -86,6 +86,7 @@ function PortfolioCard({ title, img, stacks, link, caption, tag }) {
         <Button
           disableElevation
           variant="contained"
+          target="blank"
           href={link}
           size=" small"
           sx={{

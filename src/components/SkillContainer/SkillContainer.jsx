@@ -33,7 +33,7 @@ function SkillContainer() {
   };
 
   return (
-    <Grid id="about" container sx={{ background: "#1D1D1D" }}>
+    <Grid id="skills" container sx={{ background: "#1D1D1D" }}>
       <Grid
         item
         xs={2}
