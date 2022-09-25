@@ -9,7 +9,7 @@ const buttons = ["skills", "tools"];
 function SkillTableContainer({ handleCategory, category, items }) {
   console.log("items", items);
   return (
-    <Grid container sx={{ height: "90%", marginTop: "10px" }}>
+    <Grid container sx={{ height: "100%", marginTop: "10px" }}>
       {/* <Grid item xs={12} sx={{}}>
         <ButtonGroup
           variant="string"
@@ -42,7 +42,7 @@ function SkillTableContainer({ handleCategory, category, items }) {
             ))}
         </ButtonGroup>
       </Grid> */}
-      <Grid item xs={12} sx={{}}>
+      <Grid item xs={12} sx={{ height: "100%" }}>
         <CardDisplayer items={items} cardComponent={SkillCard} type={"skill"} />
       </Grid>
     </Grid>

@@ -57,6 +57,9 @@ function SkillContainer() {
             xs: "none",
             lg: "flex",
           },
+          height: {
+            lg: "450px",
+          },
         }}
       >
         <CardMedia
@@ -71,6 +74,9 @@ function SkillContainer() {
             "&:hover": {
               filter: "grayscale(0)",
             },
+            height: {
+              lg: "100%",
+            },
           }}
         />
       </Grid>
@@ -81,7 +87,16 @@ function SkillContainer() {
         lg={10}
         sx={{ textAlign: "center", paddingTop: "20px" }}
       >
-        <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          // sx={{
+          //   display: "flex",
+          //   flexDirection: "column",
+          //   justifycontent: "start",
+          //   alignItem: "center",
+          // }}
+        >
           <SectionTitle title={"skills"} color={"white"} />
           <SkillTableContainer
             handleCategory={handleCategory}
