@@ -90,6 +90,7 @@ function CardDisplayer({ items, cardComponent, type = "skill" }) {
         style: {
           color: "#25AE92",
           display: "inline-block",
+          height: "100%",
         },
       }}
       IndicatorIcon={

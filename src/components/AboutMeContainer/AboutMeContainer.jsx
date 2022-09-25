@@ -15,6 +15,7 @@ function AboutMeContainer() {
       id="about"
       container
       sx={{
+        backgroundColor: "#e9e9e9",
         marginTop: "0",
         padding: {
           xs: "1.25rem",

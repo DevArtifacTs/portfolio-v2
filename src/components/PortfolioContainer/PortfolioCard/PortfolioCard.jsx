@@ -34,7 +34,7 @@ function PortfolioCard({ title, img, stacks, link, caption, tag }) {
         transition: "transform .5s, box-shadow .8s",
         "&:hover": {
           transform: "translateX(-10px) translateY(-10px)",
-          boxShadow: "10px 5px 10px white",
+          boxShadow: "10px 5px 10px #25AE92",
           color: "#25AE92",
           fontWeight: "bold",
         },

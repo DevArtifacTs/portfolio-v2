@@ -19,10 +19,14 @@ function PortfolioContainer() {
         item
         xs={12}
         lg={10}
-        sx={{ textAlign: "center", paddingTop: "20px" }}
+        sx={{
+          textAlign: "center",
+          paddingTop: "20px",
+          backgroundColor: "rgba(255, 255, 255,  0.9)",
+        }}
       >
         <Grid item xs={12}>
-          <SectionTitle title={"portfolio"} color={"white"} />
+          <SectionTitle title={"portfolio"} color={"black"} />
           <PortfolioTableContainer items={projects} />
         </Grid>
       </Grid>
